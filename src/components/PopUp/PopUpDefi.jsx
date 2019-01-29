@@ -3,15 +3,6 @@ import { NavLink } from 'react-router-dom'
 import './PopUpDefi.scss'
 
 export default class PopUp extends Component {
-
-  componentDidMount = () => {
-    // this.closePopUp()
-  }
-
-  closePopUp = () => {
-    setTimeout(this.props.close, 4000); 
-  }
-  
   render() {
     return (
       <div className="PopUpDefi">
@@ -19,12 +10,13 @@ export default class PopUp extends Component {
         
         <h3>Votre défi est lancé ! <br/> Merci !</h3>
 
-        <NavLink to="/3">
+        <NavLink to="/4">
           <button 
           className="ButtonPopUp"
           onClick={this.props.close}
           >Revenir à l'accueil</button>
         </NavLink>
+        
       </div>
     )
   }
